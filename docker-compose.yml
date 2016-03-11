@@ -2,10 +2,10 @@ version: '2'
 
 services:
   web:
-    image: brunogasparin/kung-fu-project-0-site:vue
+    image: brunogasparin/kung-fu-project-0-web:vue
     links:
       - db
-    env_file: .env
+    env_file: web/.env
     networks:
       - back-tier
       - front-tier  
