@@ -2,15 +2,16 @@ version: '2'
 
 services:
   web:
-    image: brunogasparin/kung-fu-project-0-web:vue
+    image: brunogasparin/kung-fu-project-0-web:latest
     links:
       - db
-    env_file: web/.env
+    env_file: .web.env
     networks:
       - back-tier
       - front-tier  
   db:
     image: postgres:9.4
+    env_file: .db.env
     environment:
       POSTGRES_USER: fenghuang
       POSTGRES_PASSWORD: secret
