@@ -6,6 +6,7 @@ services:
       context: web/
     volumes:
       - './web:/var/www/html'
+      - './web/storage:/var/www/html/storage'
     ports:
       - 8081:80
 
